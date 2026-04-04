@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-0: #f8f6f1;
+  --bg-1: #e8e3d7;
+  --bg-2: #d9ddd2;
+  --charcoal: #0f1111;
+  --moss: #74836a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(116, 131, 106, 0.2), transparent 35%),
+    radial-gradient(circle at 100% 0%, rgba(15, 17, 17, 0.06), transparent 45%),
+    linear-gradient(140deg, var(--bg-0), var(--bg-1) 52%, var(--bg-2));
+  min-height: 100vh;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-6 md:px-10;
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/50 bg-white/75 backdrop-blur-md;
+}
