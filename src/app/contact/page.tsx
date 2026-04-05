@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import { BuilderUpsellCard } from '@/components/sections/BuilderPageSections';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
 import { Navbar } from '@/components/sections/Navbar';
+import { PromiseSection } from '@/components/sections/PromiseSection';
 
 export const metadata: Metadata = {
   title: 'Contact | Prestige Landscape San Jose',
@@ -33,8 +35,11 @@ export default function ContactPage() {
       <main className="pt-20">
         <ContactHero />
         <ContactSection sectionId="contact-form" showContactInfo />
+        <BuilderUpsellCard />
+        <PromiseSection />
       </main>
       <Footer />
     </>
   );
 }
+

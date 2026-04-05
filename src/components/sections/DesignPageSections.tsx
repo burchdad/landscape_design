@@ -29,6 +29,12 @@ const detailedSteps = [
 
 const reasons = ['Custom designs', 'High-end materials', 'Experienced team'];
 
+const deliverables = [
+  'Clear project direction before construction begins',
+  'Material and layout decisions aligned to your home',
+  'A smoother handoff from concept into build',
+];
+
 export function DesignIntro() {
   return (
     <section className="py-20 md:py-28">
@@ -65,6 +71,59 @@ export function DesignDetailedProcess() {
             </article>
           );
         })}
+      </div>
+    </section>
+  );
+}
+
+export function DesignConsultationFlow() {
+  return (
+    <section className="pb-24 md:pb-32">
+      <div className="section-shell grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="rounded-[2rem] bg-[#111513] p-8 text-white shadow-luxe md:p-10">
+          <p className="text-xs uppercase tracking-[0.28em] text-[#9eb495]">What Happens Next</p>
+          <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-4xl font-semibold md:text-5xl">
+            A Design Consultation Built to Reduce Guesswork
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-white/78">
+            We begin by understanding how you want the space to function, what visual direction fits your home,
+            and what investment range makes sense. From there we shape the project into a buildable plan.
+          </p>
+          <div className="mt-8 space-y-4">
+            <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
+              <p className="text-sm font-semibold text-white">Discovery & Site Review</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">
+                We walk the property, discuss constraints, and identify where design can create the most value.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
+              <p className="text-sm font-semibold text-white">Concept Direction</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">
+                We align on layout, mood, materials, and the focal features that will define the space.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
+              <p className="text-sm font-semibold text-white">Refinement & Build Readiness</p>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">
+                We refine the plan so the transition into pricing, scheduling, and construction is clean.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="glass-panel rounded-[2rem] p-8 shadow-luxe md:p-10">
+          <p className="text-xs uppercase tracking-[0.28em] text-[#687560]">What You Leave With</p>
+          <h3 className="mt-4 font-[family-name:var(--font-cormorant)] text-4xl font-semibold text-[#111413] md:text-5xl">
+            Confidence Before the Build Starts
+          </h3>
+          <div className="mt-8 space-y-4">
+            {deliverables.map((item) => (
+              <div key={item} className="rounded-2xl border border-[#d9ddd3] bg-[#f5f6f1] p-4">
+                <p className="text-base text-[#313732]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

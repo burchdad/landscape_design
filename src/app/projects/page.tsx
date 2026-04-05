@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { Footer } from '@/components/sections/Footer';
 import { Navbar } from '@/components/sections/Navbar';
-import { Portfolio } from '@/components/sections/Portfolio';
+import { BuilderUpsellCard } from '@/components/sections/BuilderPageSections';
+import { PromiseSection } from '@/components/sections/PromiseSection';
+import { FeaturedProjectStory, ProjectsProofGrid } from '@/components/sections/ProjectsPageSections';
 
 export const metadata: Metadata = {
   title: 'Projects | Prestige Landscape San Jose',
@@ -33,7 +35,10 @@ export default function ProjectsPage() {
       <Navbar />
       <main className="pt-20">
         <ProjectsHero />
-        <Portfolio />
+        <FeaturedProjectStory />
+        <ProjectsProofGrid />
+        <BuilderUpsellCard />
+        <PromiseSection />
         <FinalCta href="/contact" />
       </main>
       <Footer />
