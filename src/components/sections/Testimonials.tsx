@@ -25,10 +25,10 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="pb-20 md:pb-28">
+    <section className="pb-24 md:pb-36">
       <div className="section-shell">
         <p className="text-xs uppercase tracking-[0.28em] text-[#687560]">Testimonials</p>
-        <h2 className="mt-3 font-[family-name:var(--font-cormorant)] text-4xl font-semibold text-[#111413] md:text-5xl">
+        <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-5xl font-semibold text-[#111413] md:text-6xl">
           Trusted by San Jose Homeowners
         </h2>
 

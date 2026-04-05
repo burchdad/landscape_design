@@ -9,10 +9,10 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="bg-[#101312] py-20 text-white md:py-28">
+    <section className="bg-[#101312] py-24 text-white md:py-36">
       <div className="section-shell">
         <p className="text-xs uppercase tracking-[0.28em] text-[#9eb495]">Our Process</p>
-        <h2 className="mt-3 font-[family-name:var(--font-cormorant)] text-4xl font-semibold md:text-5xl">
+        <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-5xl font-semibold md:text-6xl">
           A Refined Four-Step Experience
         </h2>
 
