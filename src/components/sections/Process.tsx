@@ -1,5 +1,9 @@
 import { ClipboardPen, Compass, Hammer, CheckCircle2 } from 'lucide-react';
 
+type ProcessProps = {
+  showDesignLink?: boolean;
+};
+
 const steps = [
   { title: 'Consultation', description: 'We define your goals, budget, and site vision.', icon: ClipboardPen },
   { title: 'Design', description: 'We map structure, materials, and style into one cohesive plan.', icon: Compass },
@@ -7,7 +11,7 @@ const steps = [
   { title: 'Final Walkthrough', description: 'Every detail is refined before project handoff.', icon: CheckCircle2 },
 ];
 
-export function Process() {
+export function Process({ showDesignLink = false }: ProcessProps) {
   return (
     <section className="bg-[#101312] py-24 text-white md:py-36">
       <div className="section-shell">
@@ -31,6 +35,17 @@ export function Process() {
             );
           })}
         </div>
+
+        {showDesignLink ? (
+          <div className="mt-12">
+            <a
+              href="/design"
+              className="inline-flex rounded-full border border-white/50 px-7 py-3 text-sm font-semibold uppercase tracking-wide transition hover:bg-white hover:text-black"
+            >
+              View Full Design Process
+            </a>
+          </div>
+        ) : null}
       </div>
     </section>
   );

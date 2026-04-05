@@ -1,6 +1,11 @@
-export function ContactSection() {
+type ContactSectionProps = {
+  sectionId?: string;
+  showContactInfo?: boolean;
+};
+
+export function ContactSection({ sectionId = 'contact', showContactInfo = false }: ContactSectionProps) {
   return (
-    <section id="contact" className="bg-[#101312] py-20 text-white md:py-28">
+    <section id={sectionId} className="bg-[#101312] py-20 text-white md:py-28">
       <div className="section-shell grid gap-10 md:grid-cols-2">
         <div>
           <p className="text-xs uppercase tracking-[0.28em] text-[#9eb495]">Contact</p>
@@ -11,6 +16,15 @@ export function ContactSection() {
             Tell us about your vision and timeline. We will reach out to schedule your consultation and
             provide a tailored project estimate.
           </p>
+
+          {showContactInfo ? (
+            <div className="mt-8 rounded-2xl border border-white/15 bg-white/5 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#afc3a2]">Office</p>
+              <p className="mt-3 text-white/90">San Jose, CA</p>
+              <p className="mt-2 text-white/90">(408) 000-0000</p>
+              <p className="mt-2 text-white/90">hello@prestigelandscape.com</p>
+            </div>
+          ) : null}
         </div>
 
         <form className="space-y-4 rounded-3xl border border-white/15 bg-white/5 p-6 md:p-8">

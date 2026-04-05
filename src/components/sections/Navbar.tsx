@@ -1,40 +1,42 @@
+import Link from 'next/link';
+
 export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-[#0f1111]/78 text-white backdrop-blur-md">
       <nav className="section-shell flex items-center justify-between py-4">
-        <a href="#home" className="text-lg font-semibold tracking-wide">
+        <Link href="/" className="text-lg font-semibold tracking-wide">
           Prestige Landscape
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 text-sm tracking-wide md:flex">
           <li>
-            <a href="#home" className="transition hover:text-[#d6dfcf]">
+            <Link href="/" className="transition hover:text-[#d6dfcf]">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#services" className="transition hover:text-[#d6dfcf]">
-              Services
-            </a>
+            <Link href="/design" className="transition hover:text-[#d6dfcf]">
+              Design
+            </Link>
           </li>
           <li>
-            <a href="#portfolio" className="transition hover:text-[#d6dfcf]">
-              Portfolio
-            </a>
+            <Link href="/projects" className="transition hover:text-[#d6dfcf]">
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="transition hover:text-[#d6dfcf]">
+            <Link href="/contact" className="transition hover:text-[#d6dfcf]">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="rounded-full border border-white/60 px-4 py-2 text-sm font-semibold tracking-wide transition hover:bg-white hover:text-black"
         >
           Get Quote
-        </a>
+        </Link>
       </nav>
     </header>
   );

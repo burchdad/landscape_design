@@ -7,17 +7,23 @@ const portfolioImages = [
   'https://images.unsplash.com/photo-1600566752547-1647f4f8187b?auto=format&fit=crop&w=1600&q=80',
 ];
 
-export function Portfolio() {
+type PortfolioProps = {
+  preview?: boolean;
+};
+
+export function Portfolio({ preview = false }: PortfolioProps) {
+  const imagesToShow = preview ? portfolioImages.slice(0, 3) : portfolioImages;
+
   return (
     <section id="portfolio" className="py-24 md:py-36">
       <div className="section-shell">
         <p className="text-xs uppercase tracking-[0.28em] text-[#687560]">Portfolio</p>
         <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-5xl font-semibold text-[#111413] md:text-6xl">
-          Recent Outdoor Transformations
+          {preview ? 'Featured Projects' : 'Our Work'}
         </h2>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {portfolioImages.map((imageUrl, index) => (
+          {imagesToShow.map((imageUrl, index) => (
             <article
               key={imageUrl}
               className="group relative h-80 overflow-hidden rounded-2xl border border-white/50"
@@ -34,6 +40,17 @@ export function Portfolio() {
             </article>
           ))}
         </div>
+
+        {preview ? (
+          <div className="mt-12">
+            <a
+              href="/projects"
+              className="inline-flex rounded-full border border-[#2b3328] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-[#1b2218] transition hover:bg-[#1b2218] hover:text-white"
+            >
+              View All Projects
+            </a>
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -1,4 +1,8 @@
-export function FinalCta() {
+type FinalCtaProps = {
+  href?: string;
+};
+
+export function FinalCta({ href = '/contact' }: FinalCtaProps) {
   return (
     <section className="pb-24 md:pb-32">
       <div className="section-shell">
@@ -11,7 +15,7 @@ export function FinalCta() {
             Let&apos;s design something that fits your home, your lifestyle, and your vision.
           </p>
           <a
-            href="#contact"
+            href={href}
             className="mt-10 inline-flex rounded-full bg-[#98ad8b] px-9 py-4 text-sm font-semibold uppercase tracking-wide text-black transition hover:bg-[#aec1a3]"
           >
             Get Your Free Quote

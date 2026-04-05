@@ -16,15 +16,15 @@ export function Hero() {
             San Jose Luxury Landscaping
           </p>
           <h1 className="font-[family-name:var(--font-cormorant)] text-6xl font-semibold leading-[0.95] tracking-[0.01em] md:text-8xl">
-            Luxury Outdoor Living, Designed & Built to Last
+            Transform Your Outdoor Space Into Something Extraordinary
           </h1>
           <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/90 md:text-2xl">
-            Custom landscaping and outdoor transformations for homeowners in San Jose who want more
-            than just a yard.
+            Custom landscaping, hardscaping, and outdoor living design in San Jose for homeowners who
+            expect premium results.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <a
-              href="#contact"
+              href="/contact"
               className="rounded-full bg-[#8c9f81] px-7 py-3 text-sm font-semibold uppercase tracking-wide text-black transition hover:bg-[#9db291]"
             >
               Get a Free Quote
