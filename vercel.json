@@ -3,8 +3,7 @@
   "experimentalServices": {
     "web": {
       "type": "web",
-      "framework": "nextjs",
-      "workspace": "."
+      "framework": "nextjs"
     }
   }
 }
