@@ -3,7 +3,8 @@
   "experimentalServices": {
     "web": {
       "type": "web",
-      "framework": "nextjs"
+      "framework": "nextjs",
+      "routePrefix": "/"
     }
   }
 }
